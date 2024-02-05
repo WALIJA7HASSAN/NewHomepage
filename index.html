@@ -6,8 +6,104 @@
     <title>Frontend Mentor | News homepage</title>
     <link rel="stylesheet" href="input.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <!-- boxiicons github remote links -->
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<style>
+    @media screen and (min-width:416px) {
+        .bx-menu {
+            display: none !important;
+        }      
+    }
+</style>
 </head>
-<body>
+<body class="bg-[#FFFDFA] box-border p-0 m-0">
+    <!-- navbar -->
+    <nav class="px-12 py-3 flex justify-between items-center transition ease-in-out duration-1000 relative max-[416px]:px-3">
+        <img src="./images/logo.svg" alt="logo">
+        <ul class="ml-2 flex gap-2 flex-1 justify-between  text-[#5D5F79] max-w-[25rem] text-sm max-[416px]:absolute max-[416px]:top-0 max-[416px]:-right-full max-[416px]:flex-col max-[416px]:bg-white max-[416px]:w-2/3 max-[416px]:h-screen max-[416px]:z-30 max-[416px]:justify-center transition ease-linear duration-1000" id="nav-list">
+            <div class="bx bx-x absolute top-4 right-8 text-3xl text-black invisible max-[416px]:visible transition-all ease-linear duration-1000" id="close-icon"></div>
+            <li class="max-[416px]:block max-[416px]:p-4 max-[416px]:mt-24 hover:text-[#F15E50]"><a href="#">Home</a></li>
+            <li class="max-[416px]:block max-[416px]:p-4 hover:text-[#F15E50]"><a href="#">New</a></li>
+            <li class="max-[416px]:block max-[416px]:p-4 hover:text-[#F15E50]"><a href="#">Popular</a></li>
+            <li class="max-[416px]:block max-[416px]:p-4 hover:text-[#F15E50]"><a href="#">Trending</a></li>
+            <li class="max-[416px]:block max-[416px]:p-4 hover:text-[#F15E50]"><a href="#">Categories</a></li>
+        </ul>
+        <div class="bx bx-menu text-2xl transition-all ease-linear duration-1000" id="menu-icon"></div>
+        <div class="h-screen w-full bg-black opacity-50 absolute top-0 right-0 hidden transition ease-linear duration-1000" id="blur-bg"></div>
+    </nav>
+    <!-- section1 -->
+    <section class="sm:grid sm:grid-cols-2 md:grid-cols-3">
+        <!-- left -->
+        <div class="mx-6 my-3 flex flex-col gap-6 md:col-span-2">
+            <!-- main img -->
+            <img src="./images/image-web-3-desktop.jpg" class="bg-cover bg-center" alt="">
+            <!--main text container  -->
+            <div class="flex flex-col gap-3 md:grid md:grid-cols-2 justify-center items-center">
+                <!-- main text heading -->
+                <h2 class="text-[#000019] font-bold text-4xl">The Bright Future of Web 3.0?</h2>
+                <!-- main p and btn container -->
+                <div class="flex flex-col gap-3">
+                    <p class="text-sm text-[#5D5F79]">  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                        But is it really fulfilling its promise?</p>
+                    <button class="self-start px-3 py-2 bg-[#F15E50] text-sm font-semibold text-white tracking-widest transition ease-linear duration-150 hover:bg-[#000019]">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="mx-6 my-3 flex flex-col gap-6 bg-[#000019] p-3">
+            <h2 class="text-[#E9AB53] font-bold text-2xl">New</h2>
+            <!-- single item -->
+            <article class=" border-[#C5C6CE] border-b pb-4">
+                <h3 class="text-white font-semibold hover:text-[#E9AB53] hover:cursor-pointer transition ease-linear duration-150">Hydrogen VS Electric Cars</h3>
+                <p class="text-[#C5C6CE] text-[0.75rem]">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </article>
+             <!-- single item -->
+            <article class=" border-[#C5C6CE] border-b pb-4">
+                <h3 class="text-white font-semibold hover:text-[#E9AB53] hover:cursor-pointer transition ease-linear duration-150">The Downsides of AI Artistry</h3>
+                <p class="text-[#C5C6CE] text-[0.75rem]">What are the possible adverse effects of on-demand AI image generation?</p>
+            </article>
+             <!-- single item -->
+            <article class="">
+                <h3 class="text-white font-semibold hover:text-[#E9AB53] hover:cursor-pointer transition ease-linear duration-150">Is VC Funding Drying Up?</h3>
+                <p class="text-[#C5C6CE] text-[0.75rem]">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </article>
+        </div>
+    </section>
+    <!-- articles section -->
+    <div class="mx-6 my-3 sm:grid sm:grid-cols-2 md:grid-cols-3">
+        <!-- single article -->
+        <article class="flex gap-4 mx-2 my-4 p-2 bg-white">
+            <img src="./images/image-retro-pcs.jpg" class="bg-center bg-cover max-h-48" alt="">
+            <!-- text-container -->
+            <div class="flex flex-col gap-2">
+                <h3 class="text-[#C5C6CE] text-3xl font-semibold">01</h3>
+                <h3 class="text-[#000019] font-bold text-xl transition ease-linear duration-150 cursor-pointer hover:text-[#F15E50]">Reviving Retro PCs</h3>
+                <p class="text-[#5D5F79] text-sm">What happens when old PCs are given modern upgrades?</p>
+            </div>
+        </article>
+        <!-- single article -->
+        <article class="flex gap-4 mx-2 my-4 p-2 bg-white">
+            <img src="./images/image-top-laptops.jpg" class="bg-center bg-cover max-h-48" alt="">
+            <!-- text-container -->
+            <div class="flex flex-col gap-2">
+                <h3 class="text-[#C5C6CE] text-3xl font-semibold">02</h3>
+                <h3 class="text-[#000019] font-bold text-xl  transition ease-linear duration-150 cursor-pointer hover:text-[#F15E50]">Top 10 Laptops of 2022</h3>
+                <p class="text-[#5D5F79] text-sm">Our best picks for various needs and budgets.</p>
+            </div>
+        </article>
+        <!-- single article -->
+        <article class="flex gap-4 mx-2 my-4 p-2 bg-white">
+            <img src="./images/image-gaming-growth.jpg" class="bg-center bg-cover max-h-48 " alt="">
+            <!-- text-container -->
+            <div class="flex flex-col gap-2">
+                <h3 class="text-[#C5C6CE] text-3xl font-semibold">03</h3>
+                <h3 class="text-[#000019] font-bold text-xl  transition ease-linear duration-150 cursor-pointer hover:text-[#F15E50]">The Growth of Gaming</h3>
+                <p class="text-[#5D5F79] text-sm">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+        </article>
+        
+    </div>
     <!-- js -->
     <script src="app.js"></script>
 </body>
